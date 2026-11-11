@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>John Louis Mercaral | Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;900&display=swap">
+<style>
+:root{--bg:#faf9f6;--surface:#fff;--ink:#141414;--muted:#5d5d5d;--line:#e2e0da;--blue:#1d6fe0;--blue-ink:#fff;--coral:#ff4d5e;--dark:#121212;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171717;--surface:#222;--ink:#f2f2f2;--muted:#b0b0b0;--line:#363636;--blue:#5a9bf0;--blue-ink:#101010;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171717;--surface:#222;--ink:#f2f2f2;--muted:#b0b0b0;--line:#363636;--blue:#5a9bf0;--blue-ink:#101010;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 Archivo,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif;font-weight:900;line-height:1.05;margin:0;text-transform:uppercase;letter-spacing:-.02em}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0;flex-wrap:wrap}
+.logo{font-weight:900;text-decoration:none;color:var(--ink)}
+.top nav{display:flex;gap:1.5rem;flex-wrap:wrap}
+.top nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
+.top nav a:hover{color:var(--blue)}
+.pill{display:inline-block;padding:.6rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;background:var(--blue);color:var(--blue-ink)}
+.pill.dark{background:var(--ink);color:var(--bg)}
+.pill.out{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:2.5rem;align-items:center;padding:1.5rem 0 4rem}
+.hero img{width:100%;height:auto;border-radius:16px;display:block}
+.hero h1{font-size:clamp(2.2rem,6.5vw,4rem)}
+.hero p{color:var(--muted);max-width:44ch;margin:1.25rem 0}
+.hero .acts{display:flex;gap:1rem;flex-wrap:wrap}
+.band{background:var(--dark);transform:rotate(-2.5deg);margin:0 -4vw;padding:.5rem 0}
+.band div{background:var(--coral);transform:rotate(2deg) translateY(-.3rem);padding:1.1rem 1rem;display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;color:#fff;font-weight:600;font-size:1.25rem}
+.band span::before{content:"\2B22";font-size:.8em;margin-right:2rem}
+.band span:first-child::before{content:none;margin:0}
+section{padding:5rem 0}
+section h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:1.5rem}
+.about p{max-width:78ch;color:var(--muted)}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2rem}
+.three h3{font-size:1rem;text-transform:none;letter-spacing:0;margin-bottom:.5rem}
+.three ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.95rem}
+.process{background:var(--dark);color:#f2f2f2}
+.process h2{text-align:center;margin-bottom:3rem}
+.step{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;padding:1.5rem 0 1.5rem 1.5rem;border-left:2px solid #444;position:relative}
+.step::before{content:"";position:absolute;left:-7px;top:2rem;width:12px;height:12px;border-radius:50%;background:#fff}
+.step:first-of-type::before{background:#5a9bf0}
+.step h3{font-size:1.5rem;text-transform:none;letter-spacing:0;font-weight:600}
+.step p{margin:0;color:#b8b8b8;font-size:.95rem}
+.head{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.head h2{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}
+.card .b{padding:1.25rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.card h3{font-size:1.15rem;text-transform:none;letter-spacing:0;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:.2rem 0}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:.1rem .65rem;font-size:.85rem}
+.card.soon{justify-content:center;align-items:center;text-align:center;border-style:dashed;min-height:220px;padding:1.5rem;color:var(--muted)}
+.stats{background:var(--coral);color:#fff;padding:2.5rem 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.stats strong{display:block;font-size:clamp(2.4rem,6vw,3.6rem);font-weight:900;line-height:1}
+.stats span{font-size:.95rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.5rem}
+.box h3{font-size:1.1rem;text-transform:none;letter-spacing:0;margin-bottom:.8rem}
+.box h4{margin:.9rem 0 .4rem;font-size:.9rem;color:var(--muted);font-weight:600}
+.box ul{margin:0;padding-left:1.1rem}
+.cta{text-align:center}
+.cta p{color:var(--muted);margin:1.5rem 0 .25rem}
+.cta .mail{font-size:clamp(1.2rem,4vw,1.8rem);font-weight:600;color:var(--ink)}
+.cta .acts{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2rem;display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem;flex-wrap:wrap;gap:1rem}
+footer a{color:var(--muted)}
+@media (max-width:700px){.hero{grid-template-columns:1fr}.step{grid-template-columns:1fr;gap:.5rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="logo" href="#home">JLM.</a>
+<nav aria-label="Main"><a href="#home">Home</a><a href="#about">About</a><a href="#process">Process</a><a href="#projects">Projects</a><a href="#skills">Skills</a></nav>
+<a class="pill dark" href="#contact">Contact me</a>
+</header>
+
+<main id="home">
+<div class="hero">
+<img alt="Temporary placeholder. Replace with your own photo." width="600" height="700" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 700'%3E%3Crect width='600' height='700' fill='%23ffc928'/%3E%3Ccircle cx='300' cy='270' r='105' fill='%23141414' fill-opacity='.18'/%3E%3Cpath d='M110 700c0-150 85-250 190-250s190 100 190 250z' fill='%23141414' fill-opacity='.18'/%3E%3Ctext x='300' y='600' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23141414' text-anchor='middle'%3EAdd your photo here%3C/text%3E%3C/svg%3E">
+<div>
+<h1>John Louis Mercaral</h1>
+<p>2nd Year BSIS student at CMDI Tagum, aiming to become a web developer or systems administrator.</p>
+<div class="acts"><a class="pill" href="#about">About me</a><a class="pill out" href="#projects">View my work</a></div>
+</div>
+</div>
+</main>
+</div>
+
+<div class="band" aria-label="Tools I use"><div><span>HTML/CSS</span><span>MySQL</span><span>Python</span><span>Excel</span><span>Figma</span><span>Canva</span></div></div>
+
+<div class="wrap">
+<section class="about" id="about">
+<h2>About me</h2>
+<p>I’m a 2nd Year Bachelor of Science in Information Systems student at CMDI Tagum. I’m interested in web development, data analysis, databases, UI design, and systems analysis.</p>
+<p>I enjoy learning how technology can organize information and solve everyday problems. My goal is to grow into a web developer or systems administrator.</p>
+<div class="three">
+<div><h3>Interests</h3><ul><li>Web development</li><li>Data analysis</li><li>Databases</li></ul></div>
+<div><h3>Also interested in</h3><ul><li>UI design</li><li>Systems analysis</li></ul></div>
+<div><h3>Career goals</h3><ul><li>Web developer</li><li>Systems administrator</li></ul></div>
+</div>
+</section>
+</div>
+
+<section class="process" id="process">
+<div class="wrap">
+<h2>How I worked on my project</h2>
+<div class="step"><h3>Requirements gathering</h3><p>Identified what the dealer needed to automate loan processing and credit approval.</p></div>
+<div class="step"><h3>System design</h3><p>Planned how the loan management system would work.</p></div>
+<div class="step"><h3>Development</h3><p>Built the web-based system using HTML/CSS, MySQL, and Python.</p></div>
+<div class="step"><h3>Data mining analysis</h3><p>Applied data mining techniques for credit risk and approval analysis.</p></div>
+<div class="step"><h3>Testing</h3><p>Tested the system, following the Scrum framework throughout.</p></div>
+</div>
+</section>
+
+<div class="wrap">
+<section id="projects">
+<div class="head"><h2>My recent project</h2></div>
+<div class="grid">
+<article class="card">
+<img alt="Temporary placeholder. Replace with a screenshot of the system." width="1200" height="675" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'%3E%3Crect width='1200' height='675' fill='%23e8edf4'/%3E%3Crect x='60' y='50' width='1080' height='575' rx='14' fill='%23fff' stroke='%23b8c4d6' stroke-width='3'/%3E%3Crect x='60' y='50' width='1080' height='56' rx='14' fill='%23c9d6e6'/%3E%3Ccircle cx='96' cy='78' r='9' fill='%23e08585'/%3E%3Ccircle cx='128' cy='78' r='9' fill='%23e0c685'/%3E%3Ccircle cx='160' cy='78' r='9' fill='%2385c995'/%3E%3Crect x='90' y='140' width='230' height='455' rx='8' fill='%231d6fe0'/%3E%3Crect x='350' y='140' width='250' height='110' rx='8' fill='%23e3eef7'/%3E%3Crect x='630' y='140' width='250' height='110' rx='8' fill='%23e3eef7'/%3E%3Crect x='910' y='140' width='200' height='110' rx='8' fill='%23e3eef7'/%3E%3Crect x='350' y='280' width='760' height='315' rx='8' fill='%23eef3f9'/%3E%3Ctext x='730' y='455' font-family='Arial,sans-serif' font-size='34' fill='%2314213d' text-anchor='middle'%3ETemporary image%3C/text%3E%3Ctext x='730' y='500' font-family='Arial,sans-serif' font-size='24' fill='%2355627a' text-anchor='middle'%3EReplace with a system screenshot%3C/text%3E%3C/svg%3E">
+<div class="b">
+<h3>Web-Based Motorcycle Loan Management System with Credit Risk and Approval Analysis Using Data Mining Techniques</h3>
+<p>I developed this system solo for a private motorcycle dealer to automate loan processing and improve credit approval decisions. I handled requirements gathering, system design, development, data mining analysis, and testing using Scrum.</p>
+<p>Skills: requirements gathering, system design and development, data mining, system testing, project management.</p>
+<ul class="tags"><li>HTML/CSS</li><li>MySQL</li><li>Python</li><li>Scrum</li></ul>
+<p>Next improvement: add Augmented Reality (AR) for a better online motorcycle viewing experience.</p>
+<a class="pill" href="https://rcmc.com" target="_blank" rel="noopener" style="align-self:flex-start">Visit project</a>
+</div>
+</article>
+<div class="card soon"><p>More projects and activities will be added here.</p></div>
+</div>
+</section>
+</div>
+
+<div class="stats" aria-label="Project highlights"><div class="wrap">
+<div><strong>89.19%</strong><span>Designed reduction in time spent on business activities</span></div>
+<div><strong>20+</strong><span>Average daily loan applications the dealer handles</span></div>
+<div><strong>150.625</strong><span>Estimated man-days for the project</span></div>
+</div></div>
+
+<div class="wrap">
+<section id="skills">
+<h2>Skills and tools</h2>
+<div class="skills">
+<div class="box"><h3>Comfortable with</h3>
+<h4>Web</h4><ul><li>HTML/CSS</li></ul>
+<h4>Data</h4><ul><li>Excel</li><li>MySQL</li><li>Python</li></ul>
+<h4>Design</h4><ul><li>Figma</li><li>Canva</li></ul></div>
+<div class="box"><h3>Currently learning</h3>
+<ul><li>Artificial Intelligence (AI)</li><li>Docker</li><li>Cloud computing</li></ul></div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+<h2>Interested in working together?</h2>
+<p>Drop me an email</p>
+<a class="mail" href="mailto:jloui@gmail.com">jloui@gmail.com</a>
+<div class="acts"><span class="pill out">GitHub link coming soon</span><span class="pill out">LinkedIn link coming soon</span></div>
+</section>
+
+<footer><span>© 2026 John Louis Mercaral</span><a href="#home">Back to top</a></footer>
+</div>
+</body>
+</html>
